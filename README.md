@@ -3,12 +3,12 @@
 Basicamente este código escrito em Node.js realizará tentativas de agendamento da biometria, através do site do TRE do Ceará.
 
 ## Começando
-Faça o clone do projeto com em uma pasta de sua escolha
-git clone https://github.com/PedroHenriGomes/AgendamentoBiometria.git
-### pré-requisitos
+Faça o clone do projeto em uma pasta de sua escolha 
+
+### Pré-requisitos
 
 ```
-Tenha o node e o git instalados em sua máquina
+Tenha em sua máquina o Node, npm e git.
 ```
 
 ### Colocando pra funcionar
@@ -40,3 +40,5 @@ node .\biometria.js
 ## Feito com
 
 * [Node](https://nodejs.org/en/docs/) - a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+
