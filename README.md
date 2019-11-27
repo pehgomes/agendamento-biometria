@@ -12,17 +12,6 @@ Crie uma conta no [Nexmo](https://dashboard.nexmo.com/sign-up), para obter sua c
 Tenha em sua máquina o Node, npm e git.
 ```
 
-Após criada a conta no Nexmo, substitua no código a apiKey,apiSecret e seu número de telefone. Segue exemplo abaixo.
-```
-function enviarSms() {
-    const nexmo = new Nexmo({
-        apiKey: 'SUA CHAVE',
-        apiSecret: 'SEU SECRET',
-    });
-    const to = '5585988887777'
-    const from = 'Nexmo';
-}
-```
 ### Colocando pra funcionar
 
 Faça o clone deste repo
@@ -41,6 +30,18 @@ instale as dependências
 
 ```
 npm install .\package-lock.json
+```
+
+Após criada a conta no Nexmo, substitua no código a apiKey, apiSecret e seu número de telefone. Segue exemplo abaixo.
+```
+function enviarSms() {
+    const nexmo = new Nexmo({
+        apiKey: 'SUA CHAVE',
+        apiSecret: 'SEU SECRET',
+    });
+    const to = '5585988887777'
+    const from = 'Nexmo';
+}
 ```
 
 execute o script
