@@ -11,7 +11,7 @@ Faça o clone do projeto em uma pasta de sua escolha
 Tenha em sua máquina o Node, npm e git.
 ```
 ```
-Uma [Node](https://nodejs.org/en/docs/)
+* Uma [Node](https://nodejs.org/en/docs/)
 ```
 Após criada a conta no Nexmo, substitua no código a apiKey,apiSecret e seu número de telefone.
 ```
