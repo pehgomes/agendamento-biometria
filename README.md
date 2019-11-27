@@ -23,7 +23,7 @@ git clone https://github.com/PedroHenriGomes/AgendamentoBiometria.git
 entre na pasta que você clonou o projeto
 
 ```
-cd minhaPasta
+cd AgendamentoBiometria/
 ```
 
 instale as dependências
