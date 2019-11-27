@@ -47,7 +47,7 @@ function enviarSms() {
 execute o script
 
 ```
-node .\biometria.js
+node biometria.js
 ```
 
 ## Feito com
