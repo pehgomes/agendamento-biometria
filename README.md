@@ -20,7 +20,7 @@ Faça o clone deste repo
 git clone https://github.com/PedroHenriGomes/AgendamentoBiometria.git
 ```
 
-entre na pasta que você clonou o projeto
+entre na pasta do projeto
 
 ```
 cd AgendamentoBiometria/
