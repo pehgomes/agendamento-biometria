@@ -29,7 +29,7 @@ cd AgendamentoBiometria/
 instale as dependências
 
 ```
-npm install .\package-lock.json
+npm install package-lock.json
 ```
 
 após criada a conta no Nexmo, substitua no código a apiKey, apiSecret e seu número de telefone. Segue exemplo abaixo.
