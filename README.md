@@ -6,7 +6,7 @@ Basicamente este código escrito em Node.js realizará tentativas de agendamento
 Faça o clone do projeto em uma pasta de sua escolha 
 
 ### Pré-requisitos
-Crie uma conta no [Nexmo](https://dashboard.nexmo.com/sign-up), para obter sua ckave de api e secret.
+Crie uma conta no [Nexmo](https://dashboard.nexmo.com/sign-up), para obter sua chave de api e secret.
 
 ```
 Tenha em sua máquina o Node, npm e git.
@@ -32,7 +32,7 @@ instale as dependências
 npm install .\package-lock.json
 ```
 
-Após criada a conta no Nexmo, substitua no código a apiKey, apiSecret e seu número de telefone. Segue exemplo abaixo.
+após criada a conta no Nexmo, substitua no código a apiKey, apiSecret e seu número de telefone. Segue exemplo abaixo.
 ```
 function enviarSms() {
     const nexmo = new Nexmo({
