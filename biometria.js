@@ -1,4 +1,6 @@
 const axios = require('axios');
+const moment = require('moment');
+const Nexmo = require('nexmo');
 const qs = require('qs');
 const sleep = require('system-sleep');
 
@@ -13,11 +15,14 @@ while (!deucerto) {
     for (let local1 of locais) {
         if (deucerto) return;
         tentar(local1);
-        sleep(21000);
+        sleep(14000);
     }
 }
 
 async function tentar(local) {
+    let data = new Date();
+    var dataHora = moment(data);
+    var dataForm = dataHora.format('YYYY-MM-DD HH:mm:ss');
     let res = await axios({
         method: 'post',
         url: 'http://apps.tre-ce.jus.br/agendabio/publico/registrarAgendamentoEleitor.do?acao=atualizarDia',
@@ -32,14 +37,31 @@ async function tentar(local) {
         }
     })
     if (!res.data.includes('AGUARDE')) {
+        enviarSms(local, dataForm);
         console.log('############################# ACHOU A VAGA #############################');
+        console.log(`HORA: ${dataForm}`);
         console.log(`LOCAL: ${local.nome}`);
         console.log('ACESSA AQUI:   http://www.tre-ce.jus.br/eleitor/agendamento-biometria ')
         deucerto = true;
     }
 
+    console.log(`HORA: ${dataForm}`);
     console.log(`Status code: ${res.status}`);
     console.log(`Body: ${res.body}`);
     console.log(`local: ${local.nome}`);
-    console.log(`Status code: ${res.data}`);
+    console.log(`RESP: ${res.data}`);
+
+}
+
+function enviarSms(local, data) {
+    const nexmo = new Nexmo({
+        apiKey: 'SUA CHAVE',
+        apiSecret: 'SEU SECRET',
+    });
+
+    const from = 'Nexmo';
+    const to = 'SEU TEL';
+    const text = `ACHOU UMA VAGA: \n Local: ${local.nome} \n Acesse: http://www.tre-ce.jus.br/eleitor/agendamento-biometria  \n\n EM: ${data}`;
+
+    nexmo.message.sendSms(from, to, text);
 }
