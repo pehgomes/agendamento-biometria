@@ -6,16 +6,22 @@ Basicamente este código escrito em Node.js realizará tentativas de agendamento
 Faça o clone do projeto em uma pasta de sua escolha 
 
 ### Pré-requisitos
-Crie uma conta no [Nexmo](https://dashboard.nexmo.com/sign-up), para obter sua chave de api e secret.
+Crie uma conta no [Nexmo](https://dashboard.nexmo.com/sign-up), para obter sua ckave de api e secret.
 
 ```
 Tenha em sua máquina o Node, npm e git.
 ```
 
-Após criada a conta no Nexmo, substitua no código a apiKey,apiSecret e seu número de telefone.
+Após criada a conta no Nexmo, substitua no código a apiKey,apiSecret e seu número de telefone. Segue exemplo abaixo.
 ```
-apiKey: 'sua chave de api do nexmo', apiSecret: 'sua api secret',
-na function enviarSms altere o "const to" para o seu telefone. ex: const to = '5585988887777'
+function enviarSms() {
+    const nexmo = new Nexmo({
+        apiKey: 'SUA CHAVE',
+        apiSecret: 'SEU SECRET',
+    });
+    const to = '5585988887777'
+    const from = 'Nexmo';
+}
 ```
 ### Colocando pra funcionar
 
@@ -46,3 +52,5 @@ node .\biometria.js
 ## Feito com
 
 * [Node](https://nodejs.org/en/docs/) - a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+
