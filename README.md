@@ -1,6 +1,6 @@
 # Agendamento de Biometria
 
-Basicamente este código escrito em Node.js realizará tentativas de agendamento da biometria, através do site do TRE do Ceará.
+Diante do cenário do cadastro de biometrias em um curto espaço de tempo, levando a acontecer filas quilométricas ao redor do centro de eventos do ceara, durante as últimas semanas de maio de 2019, basicamente este código escrito em node.js realizará tentativas de agendamento da biometria, através do sistema do TRE do Ceará.
 
 ## Começando
 Faça o clone do projeto em uma pasta de sua escolha 
